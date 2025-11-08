@@ -1,14 +1,17 @@
-import Counter from './features/counter/counter';
-import Posts from './features/posts/posts';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { UsersList } from './features/usersDemo/UsersList';
+import { ProfileScreen } from './features/profileDemo/ProfileScreen';
+
 
 function App(){
 
   return(
-    <div>
-      <h1>Redux Toolkit Example</h1>
-      <Counter />
-      <Posts />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<UsersList />} />
+        <Route path="/profile" element={<ProfileScreen />} />         
+      </Routes>
+    </BrowserRouter>
   );
 }
 
