@@ -7,7 +7,7 @@ export const fetchPosts = createAsyncThunk('posts/fetchPosts', async ()=>{
 });
 
 
-const postsSlice = createSlice({
+const newPostsSlice = createSlice({
     name: 'posts',
     initialState: { items:[], status: 'idle' },
     reducers: {},
@@ -21,4 +21,4 @@ const postsSlice = createSlice({
     },
 });
 
-export default postsSlice.reducer;
+export default newPostsSlice.reducer;

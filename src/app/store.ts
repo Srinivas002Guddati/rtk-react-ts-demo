@@ -6,6 +6,7 @@ import { usersApi } from '../features/usersDemo/usersApi';
 import { profileApi } from '../features/profileDemo/profileApi';
 import profileReducer  from '../features/profileDemo/profileSlice';
 import todoReducer from '../features/todo-app/todoSlice';
+import newPostsSlice from '../features/postThunk/postSlice';
 
 export const store =  configureStore({
     reducer: {
@@ -13,6 +14,7 @@ export const store =  configureStore({
         posts: postsReducer,
         profileUI: profileReducer,
         todo: todoReducer,
+        newPosts: newPostsSlice,
         [usersApi.reducerPath]: usersApi.reducer,
         [profileApi.reducerPath]: profileApi.reducer
     },
