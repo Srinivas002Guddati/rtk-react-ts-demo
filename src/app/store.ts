@@ -1,20 +1,16 @@
 
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from '../features/counter/counterSlice';
-import postsReducer from '../features/posts/postSlice';
 import { usersApi } from '../features/usersDemo/usersApi';
 import { profileApi } from '../features/profileDemo/profileApi';
 import profileReducer  from '../features/profileDemo/profileSlice';
-import todoReducer from '../features/todo-app/todoSlice';
-import newPostsSlice from '../features/postThunk/postSlice';
+import  postsReducer  from '../features/crud-operations/posts/postsSlice';
 
 export const store =  configureStore({
     reducer: {
         counter: counterReducer,
-        posts: postsReducer,
         profileUI: profileReducer,
-        todo: todoReducer,
-        newPosts: newPostsSlice,
+        posts: postsReducer,
         [usersApi.reducerPath]: usersApi.reducer,
         [profileApi.reducerPath]: profileApi.reducer
     },
